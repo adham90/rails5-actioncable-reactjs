@@ -4,5 +4,6 @@ class SessionsController < ApplicationController
 
   def create
     session[:username] = params.require(:session)[:username]
+    redirect_to messages_path
   end
 end

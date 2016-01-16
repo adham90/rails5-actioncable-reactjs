@@ -15,7 +15,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'react-rails'
-gem 'sprockets-es6'
+gem 'sprockets'
+gem 'sprockets-es6', require: 'sprockets/es6'
 
 gem 'jbuilder', '~> 2.0'
 

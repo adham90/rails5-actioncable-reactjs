@@ -262,6 +262,7 @@ DEPENDENCIES
   rspec-support!
   sass-rails (~> 5.0)
   spring
+  sprockets
   sprockets-es6
   sprockets-rails!
   sqlite3
