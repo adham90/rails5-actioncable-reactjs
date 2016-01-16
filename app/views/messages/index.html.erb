@@ -1,0 +1,9 @@
+<p>Name: <%= session[:name] %></p>
+
+<%= react_component('Messages') %>
+
+<%= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit 'Send' %>
+<% end %>
