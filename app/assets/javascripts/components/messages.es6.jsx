@@ -8,7 +8,7 @@ class Messages extends React.Component {
     return (
       <div className='messages'>
         {this.state.messages.map(function (message, i) {
-          return <p key={i}><b>{message.sender}:</b>{message.content}</p>
+          return <p key={i}><b>{message.sender}: </b>{message.content}</p>
         })}
       </div>
     )
