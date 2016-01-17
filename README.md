@@ -8,6 +8,9 @@ Action Cable provides real time communication. ReactJS is a good tool to manage 
 
 Anytime data changes the new data is instantly provided by Action Cable and the new data is shown on the view without user doing anything on the application by ReactJS.
 
+
+
+
 ## Dependencies
 
 You must have redis installed and running on the default port:6379 (or configure it in config/redis/cable.yml).
@@ -25,7 +28,7 @@ You must have redis installed and running on the default port:6379 (or configure
 
 ## Start the servers
 
-1. Run `./bin/setup`
+1. Run `bundle install`
 2. Run `./bin/cable`
 3. Open up a separate terminal and run: `redis-server`
 4. Open up a separate terminal and run: `rails server`
