@@ -3,7 +3,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    session[:username] = params.require(:session)[:username]
-    redirect_to messages_path
+    username = session_params[:username]
+    if username != ""
+      session[:username] = username
+      redirect_to messages_path
+    else
+      redirect_to "/"
+    end
   end
+
+  private
+
+   def session_params
+      params.require(:session).permit(:username)
+   end
 end

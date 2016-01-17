@@ -9,4 +9,11 @@ RSpec.describe MessagesController, type: :controller do
     end
   end
 
+  describe "POST #create" do
+    it "returns http ok with contant" do
+      post :create, message: {contant: "test"}
+      expect(response).to have_http_status(:success)
+    end
+  end
+
 end

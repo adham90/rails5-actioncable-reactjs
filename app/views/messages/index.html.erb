@@ -1,10 +1,25 @@
-<div class="col-md-12">
-  <p>Name: <%= session[:username] %></p>
+<div class="main">
+  
+  <div class="content-wrap">
+    <div class='content'>
+      <%= react_component('Messages') %>
+    </div>
+  </div>
 
-  <%= react_component('Messages') %>
-
-  <%= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f| %>
-    <%= f.text_field :content, class: "form-control", placeholder: 'Enter your message and press RETURN'%>
-    <!-- <%= f.submit 'Send', class: "btn btn-primary"%> -->
-  <% end %>
+  <div class="footer-wrap">
+    <div class="footer">
+      <%= form_for :message, url: messages_path, remote: true, id: 'messages-form' do |f| %>
+        <%= f.text_field :content, class: "form-control", placeholder: 'Enter your message and press RETURN'%>
+        <!-- <%= f.submit 'Send', class: "btn btn-primary"%> -->
+      <% end %>
+    </div>
+  </div>
 <div>
+
+<script>
+  $("#message_content").keyup(function(event){
+      if(event.keyCode == 13){
+        document.getElementById("message_content").value = '';
+      }
+  });
+</script>
